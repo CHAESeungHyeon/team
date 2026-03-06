@@ -52,3 +52,12 @@ header .logo {
 .menu li img {
   width: 21px;
 }
+
+.categories a{
+  transition: 0.3s;
+
+}
+.categories a.active {
+  color: black;
+  font-weight: 600;
+}
