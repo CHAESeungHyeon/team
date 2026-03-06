@@ -1,16 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const menuLinks = document.querySelectorAll(".categories a");
+  const currentPage = window.location.pathname.split("/").pop().toLowerCase();
 
-  const currentPage = location.pathname.split("/").pop();
+  const category = currentPage.split("-")[0]; 
+  // men-main.html → men
+  // women-detail.html → women
+
+  const menuLinks = document.querySelectorAll(".categories a");
 
   menuLinks.forEach(link => {
 
-    const linkPage = link.href.split("/").pop();
+    const linkCategory = link.getAttribute("href").split("-")[0].toLowerCase();
 
-    if (currentPage === linkPage) {
-      link.classList.add("active");
+    if (category === linkCategory) {
+      link.style.color = "black";
+      link.style.fontWeight = "600";
     }
 
   });
+
 });

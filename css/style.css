@@ -411,6 +411,7 @@ font-weight: 300;
   #aiBanner .content .aiBox a{
     display: flex;
     align-items: center;
+    gap: 10px;
     font-size: 26px;
     color: #fff;
     margin: 24px 24px 34px;
