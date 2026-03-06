@@ -59,3 +59,10 @@ border: none;
   font: inherit;
   color: inherit;
 }
+.container{
+  width: 1200px;
+}
+main {
+  width: 100%;
+  margin: 74px auto 0 auto;
+}

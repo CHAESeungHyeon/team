@@ -1,50 +1,10 @@
-header{
-  margin: auto;
-  max-width: 1920px;
-  width: 100%;
-  height: 44px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-.navi-wrap{
-  margin: 28px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-}
-.categories{
-  display: flex;
-  gap: 28px;
-  align-items: center;
-}
-.logo{
-  font-size: 26px;
-  font-weight: bold;
-  color: #333;
-  position: absolute;
-  top: -10px; 
-  left: 50%;
-  transform: translateX(-50%);
-}
-.menu{
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-.menu li{
-  font-size: 12px;
-}
-.menu li img{
-  width: 21px;
-}
-
 /* topBanner1 */
 #topBanner1{
   width: 100%;
   max-width: 1920px;
 }
 #topBanner1 .top{
-  background: url(../img/topBanner.png) center/cover;
+  background: url(../img/mainpage/topBanner.png) center/cover;
   height: 426px;
   margin: 20px 0;
   display: flex;
@@ -231,6 +191,7 @@ font-weight: bold;
 #NewProduct .imgCard .card{
   position: relative;
 }
+
 #NewProduct .imgCard .card .new{
   position: absolute;
   left: 11px;
@@ -255,10 +216,27 @@ font-weight: bold;
 #NewProduct .imgCard .card .list p{
 font-size: 20px;
 }
-
 #NewProduct img{
   width: 275px;
 }
+#NewProduct .card .img .hover{
+  width: 275px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  color: #fff;
+  opacity: 0;
+}
+#NewProduct .card .img:hover .hover{
+  opacity: 1;
+}
+
 
 /* ====================MybodyTypeStylist=========================== */
 #bodytype{
@@ -295,13 +273,18 @@ gap: 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 65px;
+  position: relative;
 }
 
-#bodytype .imgCard .card p{
+#bodytype .imgCard .card .list > p{
   font-size: 14px;
   color: #687280;
   font-weight: 200;
   margin: 7px 0 13px;
+}
+#bodytype .imgCard .card{
+  position: relative;
+  height: 100%;
 }
 #bodytype .imgCard .card h4{
 font-size: 18px;
@@ -338,12 +321,55 @@ font-weight: 300;
     margin: auto;
   }
 
+
+
+  #bodytype .imgCard > .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(17,17,17,0.1) 0%,
+    rgba(17,17,17,0.4) 50%,
+    rgba(17,17,17,0.9) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+#bodytype .imgCard .hover{
+  position: absolute;
+  top: 55%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+#bodytype .imgCard .hover > p,
+#bodytype .imgCard .hover > h4,
+#bodytype .imgCard .hover > ul li{
+  color: #fff;
+  margin-left: 15px;
+  margin-bottom: 8px;
+}
+#bodytype .imgCard .hover ul li{
+  list-style: disc;
+  margin-left: 35px;
+}
+#bodytype .imgCard .card:hover::after,
+#bodytype .imgCard .card:hover .hover
+{
+  opacity: 1;
+}
+
+
   /* =======================AI==================================== */
   #aiBanner{
     max-width: 1920px;
     width: 100%;
     height: 500px;
-    background: url(../img/Ai\ Pick.png) center/cover;
+    background: url(../img/mainpage/Ai\ Pick.png) center/cover;
     margin: 190px auto 80px;
     /* position: relative; */
   }
@@ -435,7 +461,7 @@ font-weight: 300;
 #recommended .content .bestItem{
   width: 555px;
   height: 654px;
-  background: url("../img/AiProductCard\ \(1\).png") center / cover no-repeat;
+  background: url("../img/mainpage/AiProductCard\ \(1\).png") center / cover no-repeat;
   position: relative;
 }
 #recommended .content .bestItem .itemtxt{
@@ -590,6 +616,8 @@ margin-bottom: 17px;
   width:100%;
   min-width: 1190px;
   max-width: 1920px;
+  overflow:hidden;
+  margin-bottom: 220px;
 }
 
 #lookbook .titlebox {
@@ -598,19 +626,13 @@ margin-bottom: 17px;
   margin-bottom:40px;
 }
 #lookbook .titlebox h1{
-  font-size:30px;
+  font-size:40px;
   margin-bottom:12px;
 }
 
 #lookbook .titlebox p{
   font-size: 20px;
   color:#9CA3AF;
-}
-
-
-#lookbook{
-  width:100%;
-  overflow:hidden;
 }
 
 .carousel{
