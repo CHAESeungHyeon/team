@@ -59,10 +59,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   margin-top: 20px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.hero-btn img{
+  width: 8px;
+  height: 8px;
 }
 
 .hero-half:hover .hero-title {
@@ -354,6 +359,11 @@
   align-items: center;
   justify-content: center;
   margin-top: 28px;
+  gap: 5px;
+}
+.collection-btn img{
+  width: 6px;
+  height: 10px;
 }
 
 /* Conveyor belt slider */
